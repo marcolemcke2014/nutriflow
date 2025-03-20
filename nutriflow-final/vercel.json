@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/pages/**/*.{js,jsx}",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/api/vision-ocr", "dest": "/api/vision-ocr.js" },
+    { "src": "/api/analyze-menu", "dest": "/api/analyze-menu.js" },
+    { "src": "/(.*)", "dest": "/src/pages/index.js" }
+  ]
+}
